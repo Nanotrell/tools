@@ -1,5 +1,12 @@
 
 
+
+
+
+document.getElementsByClassName("second-background-block")[0].style.background = "radial-gradient(at left , #9DA1D5, transparent)"; 
+document.getElementsByClassName("background-block")[0].style.background = "radial-gradient(at bottom right , #B92977, transparent)";
+document.getElementsByClassName("background-block")[0].style.opacity = "1";
+document.getElementsByClassName("second-background-block")[0].style.opacity = "1";
 // генерация градиента
 setInterval(function () {
 
@@ -110,35 +117,35 @@ setInterval(function () {
 	  document.getElementsByClassName("background-block2")[0].style.background = gradient11;
 	  document.getElementsByClassName("second-background-block2")[0].style.background = gradient22;
 	
+	  
+	//   if (document.getElementsByClassName("background-block")[0].style.opacity == "0") {
+	// 	document.getElementsByClassName("background-block")[0].style.opacity = "1";
+	// 	document.getElementsByClassName("background-block2")[0].style.opacity = "0";
+	// } else {
+	// 	document.getElementsByClassName("background-block")[0].style.opacity = "0";
+	// 	document.getElementsByClassName("background-block2")[0].style.opacity = "1";
+	// }
 	
-	  if (document.getElementsByClassName("background-block")[0].style.opacity == "0") {
-		document.getElementsByClassName("background-block")[0].style.opacity = "1";
-		document.getElementsByClassName("background-block2")[0].style.opacity = "0";
-	} else {
-		document.getElementsByClassName("background-block")[0].style.opacity = "0";
-		document.getElementsByClassName("background-block2")[0].style.opacity = "1";
-	}
+	// if (document.getElementsByClassName("second-background-block")[0].style.opacity == "0") {
+	// 	document.getElementsByClassName("second-background-block")[0].style.opacity = "1";
+	// 	document.getElementsByClassName("second-background-block2")[0].style.opacity = "0";
+	// } else {
+	// 	document.getElementsByClassName("second-background-block")[0].style.opacity = "0";
+	// 	document.getElementsByClassName("second-background-block2")[0].style.opacity = "1";
+	// }
 	
-	if (document.getElementsByClassName("second-background-block")[0].style.opacity == "0") {
-		document.getElementsByClassName("second-background-block")[0].style.opacity = "1";
-		document.getElementsByClassName("second-background-block2")[0].style.opacity = "0";
-	} else {
-		document.getElementsByClassName("second-background-block")[0].style.opacity = "0";
-		document.getElementsByClassName("second-background-block2")[0].style.opacity = "1";
-	}
-	
-	}, 2000);
+	}, 4000);
 
 
 	document.getElementById("goals").onclick = sectionGoalsOpen;
 	document.getElementById("notes").onclick = sectionNotesOpen;
 	document.getElementById("tasks").onclick = sectionTasksOpen;
 	
-	document.getElementsByClassName("goals")[0].style.opacity = "0";
+	document.getElementsByClassName("goals")[0].style.opacity = "1";
 	document.getElementsByClassName("notes")[0].style.opacity = "0";
 	document.getElementsByClassName("tasks")[0].style.opacity = "0";
 	
-	document.getElementsByClassName("element-one")[0].style.opacity = "0";
+	document.getElementsByClassName("element-one")[0].style.opacity = "1";
 	document.getElementsByClassName("element-two")[0].style.opacity = "0";
 	document.getElementsByClassName("element-three")[0].style.opacity = "0";
 	
@@ -320,3 +327,12 @@ for (let i = 0; i < wordRepeatTimes; i++) {
 	}
 	wordContainerEl.appendChild(wordEl);
 }
+
+
+
+
+document.getElementById("goal-create").onclick = CreateGoal;
+document.getElementById("note-create").onclick = CreateNote;
+document.getElementById("task-create").onclick = CreateTask;
+
+
