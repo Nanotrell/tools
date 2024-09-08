@@ -1,5 +1,10 @@
 
 
+localStorage.setItem("textColor", "#EBE7E7");
+document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
+localStorage.setItem("border", "2px solid #9F9A9A");
+localStorage.setItem("boxShadow", "5px 4px 67px 0px #FAF4F4");
+document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(61, 52, 139)";
 
 
 
@@ -137,78 +142,80 @@ setInterval(function () {
 	}, 4000);
 
 
-	document.getElementById("goals").onclick = sectionGoalsOpen;
+	// document.getElementById("goals").onclick = sectionGoalsOpen;
 	document.getElementById("notes").onclick = sectionNotesOpen;
-	document.getElementById("tasks").onclick = sectionTasksOpen;
+	// document.getElementById("tasks").onclick = sectionTasksOpen;
 	
-	document.getElementsByClassName("goals")[0].style.opacity = "1";
-	document.getElementsByClassName("notes")[0].style.opacity = "0";
-	document.getElementsByClassName("tasks")[0].style.opacity = "0";
+	// document.getElementsByClassName("goals")[0].style.opacity = "1";
+	// document.getElementsByClassName("notes")[0].style.opacity = "0";
+	// document.getElementsByClassName("tasks")[0].style.opacity = "0";
 	
-	document.getElementsByClassName("element-one")[0].style.opacity = "1";
-	document.getElementsByClassName("element-two")[0].style.opacity = "0";
-	document.getElementsByClassName("element-three")[0].style.opacity = "0";
+	// document.getElementsByClassName("element-one")[0].style.opacity = "1";
+	document.getElementsByClassName("element-two")[0].style.opacity = "1";
+	// document.getElementsByClassName("element-three")[0].style.opacity = "0";
 	
 	
-	function sectionGoalsOpen() {
-		if (document.getElementsByClassName("goals")[0].style.opacity = "0") {
-			document.getElementsByClassName("goals")[0].style.opacity = "1";
-			document.getElementsByClassName("element-one")[0].style.opacity = "1";
+	// function sectionGoalsOpen() {
+		// if (document.getElementsByClassName("goals")[0].style.opacity = "0") {
+		// 	document.getElementsByClassName("goals")[0].style.opacity = "1";
+		// 	document.getElementsByClassName("element-one")[0].style.opacity = "1";
 
-			document.getElementsByClassName("goals")[0].style.zIndex = "1";
-			document.getElementsByClassName("notes")[0].style.zIndex = "0";
-			document.getElementsByClassName("tasks")[0].style.zIndex = "0";
+		// 	document.getElementsByClassName("goals")[0].style.zIndex = "1";
+		// 	document.getElementsByClassName("notes")[0].style.zIndex = "0";
+		// 	document.getElementsByClassName("tasks")[0].style.zIndex = "0";
 	
-			document.getElementsByClassName("notes")[0].style.opacity = "0";
-			document.getElementsByClassName("tasks")[0].style.opacity = "0";
+		// 	document.getElementsByClassName("notes")[0].style.opacity = "0";
+		// 	document.getElementsByClassName("tasks")[0].style.opacity = "0";
 	
-			document.getElementsByClassName("element-two")[0].style.opacity = "0";
-			document.getElementsByClassName("element-three")[0].style.opacity = "0";
-		} else {
-			document.getElementsByClassName("goals")[0].style.opacity = "0";
-			document.getElementsByClassName("element-one")[0].style.opacity = "0";
-		}
-	}
+		// 	document.getElementsByClassName("element-two")[0].style.opacity = "0";
+		// 	document.getElementsByClassName("element-three")[0].style.opacity = "0";
+		// } else {
+		// 	document.getElementsByClassName("goals")[0].style.opacity = "0";
+		// 	document.getElementsByClassName("element-one")[0].style.opacity = "0";
+		// }
+	// }
+
+	document.getElementsByClassName("notes")[0].style.opacity = "1";
 	
 	function sectionNotesOpen() {
 		if (document.getElementsByClassName("notes")[0].style.opacity = "0") {
 			document.getElementsByClassName("notes")[0].style.opacity = "1";
 			document.getElementsByClassName("element-two")[0].style.opacity = "1";
 
-			document.getElementsByClassName("goals")[0].style.zIndex = "0";
+			// document.getElementsByClassName("goals")[0].style.zIndex = "0";
 			document.getElementsByClassName("notes")[0].style.zIndex = "1";
-			document.getElementsByClassName("tasks")[0].style.zIndex = "0";
+			// document.getElementsByClassName("tasks")[0].style.zIndex = "0";
 	
-			document.getElementsByClassName("tasks")[0].style.opacity = "0";
-			document.getElementsByClassName("goals")[0].style.opacity = "0";
+			// document.getElementsByClassName("tasks")[0].style.opacity = "0";
+			// document.getElementsByClassName("goals")[0].style.opacity = "0";
 	
-			document.getElementsByClassName("element-three")[0].style.opacity = "0";
-			document.getElementsByClassName("element-one")[0].style.opacity = "0";
+			// document.getElementsByClassName("element-three")[0].style.opacity = "0";
+			// document.getElementsByClassName("element-one")[0].style.opacity = "0";
 		} else {
 			document.getElementsByClassName("notes")[0].style.opacity = "0";
 			document.getElementsByClassName("element-two")[0].style.opacity = "0";
 		}
 	}
 	
-	function sectionTasksOpen() {
-		if (document.getElementsByClassName("tasks")[0].style.opacity = "0") {
-			document.getElementsByClassName("tasks")[0].style.opacity = "1";
-			document.getElementsByClassName("element-three")[0].style.opacity = "1";
+	// function sectionTasksOpen() {
+	// 	if (document.getElementsByClassName("tasks")[0].style.opacity = "0") {
+	// 		document.getElementsByClassName("tasks")[0].style.opacity = "1";
+	// 		document.getElementsByClassName("element-three")[0].style.opacity = "1";
 
-			document.getElementsByClassName("goals")[0].style.zIndex = "0";
-			document.getElementsByClassName("notes")[0].style.zIndex = "0";
-			document.getElementsByClassName("tasks")[0].style.zIndex = "1";
+	// 		// document.getElementsByClassName("goals")[0].style.zIndex = "0";
+	// 		document.getElementsByClassName("notes")[0].style.zIndex = "0";
+	// 		document.getElementsByClassName("tasks")[0].style.zIndex = "1";
 	
-			document.getElementsByClassName("notes")[0].style.opacity = "0";
-			document.getElementsByClassName("goals")[0].style.opacity = "0";
+	// 		document.getElementsByClassName("notes")[0].style.opacity = "0";
+	// 		// document.getElementsByClassName("goals")[0].style.opacity = "0";
 	
-			document.getElementsByClassName("element-one")[0].style.opacity = "0";
-			document.getElementsByClassName("element-two")[0].style.opacity = "0";
-		} else {
-			document.getElementsByClassName("tasks")[0].style.opacity = "0";
-			document.getElementsByClassName("element-three")[0].style.opacity = "0";
-		}
-	}
+	// 		// document.getElementsByClassName("element-one")[0].style.opacity = "0";
+	// 		document.getElementsByClassName("element-two")[0].style.opacity = "0";
+	// 	} else {
+	// 		document.getElementsByClassName("tasks")[0].style.opacity = "0";
+	// 		document.getElementsByClassName("element-three")[0].style.opacity = "0";
+	// 	}
+	// }
 	
 	
 
@@ -244,6 +251,7 @@ for (let index = 0; index < document.getElementsByClassName("color").length; ind
 		
 		if (document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(52, 68, 13)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(56, 4, 14)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(39, 35, 58)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(61, 52, 139)") {
 			localStorage.setItem("textColor", "#EBE7E7");
+			document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
 			localStorage.setItem("border", "2px solid #9F9A9A");
 			localStorage.setItem("boxShadow", "5px 4px 67px 0px #FAF4F4");
 			for (let index = 0; index < document.getElementsByClassName("text").length; index++) {
@@ -265,8 +273,10 @@ for (let index = 0; index < document.getElementsByClassName("color").length; ind
 		};
 		if (document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(52, 68, 13)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(56, 4, 14)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(39, 35, 58)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(61, 52, 139)"){
 			localStorage.setItem("textColor", "rgb(0, 0, 0, 0.5)");
+			document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
 			localStorage.setItem("border", "none");
 			localStorage.setItem("boxShadow", "5px 4px 67px 0px rgba(0, 0, 0, 0.4)");
+
 			for (let index = 0; index < document.getElementsByClassName("text").length; index++) {
 				document.getElementsByClassName("text")[index].style.color = localStorage.getItem("textColor");
 				
@@ -306,33 +316,100 @@ function colorChangeOpen() {
 
 
 
-console.clear();
+// console.clear();
 
-const wordContainerEl = document.querySelector("[data-word]");
-const word = wordContainerEl.getAttribute("data-word");
-const wordRepeatTimes = wordContainerEl.getAttribute("data-word-repeat");
-const textColorsArray = wordContainerEl.getAttribute("data-text-colors").split(",");
+// const wordContainerEl = document.querySelector("[data-word]");
+// const word = wordContainerEl.getAttribute("data-word");
+// const wordRepeatTimes = wordContainerEl.getAttribute("data-word-repeat");
+// const textColorsArray = wordContainerEl.getAttribute("data-text-colors").split(",");
 
-for (let i = 0; i < wordRepeatTimes; i++) {
-	const wordEl = document.createElement("span");
-	wordEl.className = "word";
-	wordEl.style.setProperty("--word-index", i);
-	wordEl.style.setProperty("--color", textColorsArray[i]);
-	for (let j = 0; j < word.length; j++) {
-		const charEl = document.createElement("span");
-		charEl.className = "char";
-		charEl.style.setProperty("--char-index", j);
-		charEl.innerHTML = word[j];
-		wordEl.appendChild(charEl);
-	}
-	wordContainerEl.appendChild(wordEl);
-}
-
-
+// for (let i = 0; i < wordRepeatTimes; i++) {
+// 	const wordEl = document.createElement("span");
+// 	wordEl.className = "word";
+// 	wordEl.style.setProperty("--word-index", i);
+// 	wordEl.style.setProperty("--color", textColorsArray[i]);
+// 	for (let j = 0; j < word.length; j++) {
+// 		const charEl = document.createElement("span");
+// 		charEl.className = "char";
+// 		charEl.style.setProperty("--char-index", j);
+// 		charEl.innerHTML = word[j];
+// 		wordEl.appendChild(charEl);
+// 	}
+// 	wordContainerEl.appendChild(wordEl);
+// }
 
 
-document.getElementById("goal-create").onclick = CreateGoal;
+
+
+// document.getElementById("goal-create").onclick = CreateGoal;
 document.getElementById("note-create").onclick = CreateNote;
-document.getElementById("task-create").onclick = CreateTask;
+// document.getElementById("task-create").onclick = CreateTask;
 
 
+
+
+
+
+
+
+
+
+    var List = document.getElementsByClassName("notes")[0];
+    var Mask = 'task_';
+
+    function showTasks() {
+		console.log(localStorage)
+
+      var Storage_size = localStorage.length;
+
+      if (Storage_size > 0) {
+		console.log(111111)
+
+        for (var i = 0; i < Storage_size; i++) {
+          var key = localStorage.key(i);
+		  console.log(key)
+		  
+          if (key.indexOf(Mask) == 0) {
+			console.log(22222222)
+			var number_Id = i;
+            var elem = document.createElement('div');
+			elem.setAttribute("data-elemid", Mask + number_Id)
+			// elem.addClass('tdItem');
+			// elem.attr('data-itemid', Mask + number_Id);
+			elem.textContent = localStorage.getItem(key);
+			List.appendChild(elem);
+			console.log(3333333)
+          }
+        }
+      }
+    }
+
+    showTasks();
+
+
+
+	function CreateNote() {
+		var str = document.getElementsByTagName("input")[0].value;
+		if (str.length > 0) {
+			number_Id = (List.getElementsByTagName("div")).length + 1;
+			localStorage.setItem(Mask + number_Id, str);
+			var elem = document.createElement('div');
+			elem.setAttribute("data-elemid", Mask + number_Id)
+			// elem.addClass('tdItem');
+			// elem.attr('data-itemid', Mask + number_Id);
+			elem.textContent = str;
+			List.appendChild(elem);
+		}
+	}
+
+
+
+	// for (let index = 1; index < List.getElementsByTagName("div").length; index++) {
+	// 	List.getElementsByTagName("div")[index].onclick = RemoveNote;
+	// 	function RemoveNote() {
+	// 		localStorage.removeItem(List.getElementsByTagName("div")[index].getAttribute("data-elemid"));
+						
+	// 		List.remove(List.getElementsByTagName("div")[index]);
+	// 	}
+		
+	// }
