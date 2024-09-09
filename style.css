@@ -125,7 +125,7 @@ main {
 	width: 100%;
 	position: absolute;
 	height: 100%;
-	animation: gradient-light 40s infinite ;
+	animation: gradient-light 60s infinite ;
 }
 
 .second-background-block {
@@ -136,7 +136,7 @@ main {
 	position: absolute;
 	height: 100%;
 	opacity: .8;
-	animation: gradient-purple 40s infinite;
+	animation: gradient-purple 60s infinite;
 }
 
 .background-block2 {
@@ -146,7 +146,7 @@ main {
 	width: 100%;
 	position: absolute;
 	height: 100%;
-	animation: gradient-light-backwards 40s infinite;
+	animation: gradient-light-backwards 60s infinite;
 }
 
 .second-background-block2 {
@@ -157,7 +157,7 @@ main {
 	position: absolute;
 	height: 100%;
 	opacity: .8;
-	animation: gradient-purple-backwards 40s infinite;
+	animation: gradient-purple-backwards 60s infinite;
 }
 
 .goals, .notes, .tasks{
