@@ -13,133 +13,133 @@ document.getElementsByClassName("background-block")[0].style.background = "radia
 document.getElementsByClassName("background-block")[0].style.opacity = "1";
 document.getElementsByClassName("second-background-block")[0].style.opacity = "1";
 // генерация градиента
-setInterval(function () {
+// setInterval(function () {
 
-	let gradient = (function generateGradient(min, max) {
-		let num = (function getRandomNumber(min, max) {
-			return Math.floor(Math.random() * (max - min) + min)
-		} )(min, max)
+// 	let gradient = (function generateGradient(min, max) {
+// 		let num = (function getRandomNumber(min, max) {
+// 			return Math.floor(Math.random() * (max - min) + min)
+// 		} )(min, max)
 	
-		// let gradientDirection;
+// 		// let gradientDirection;
 		
-		if (localStorage.getItem("bodyColor")=="rgb(244, 166, 161)" || localStorage.getItem("bodyColor")=="rgb(221, 190, 168)") {
-			if (num == 1){return "radial-gradient(at bottom, #9DA1D5, transparent)"};
-			if (num == 2){return "radial-gradient(at top , #9DA1D5, transparent)"};
-			if (num == 3){return "radial-gradient(at left , #9DA1D5, transparent)"};
-			if (num == 4){return "radial-gradient(at right , #9DA1D5, transparent)"};
-			if (num == 5){return "radial-gradient(at top left , #9DA1D5, transparent)"};
-			if (num == 6){return "radial-gradient(at top right, #9DA1D5, transparent)"};
-			if (num == 7){return "radial-gradient(at bottom left , #9DA1D5, transparent)"};
-			if (num == 8){return "radial-gradient(at bottom right , #9DA1D5, transparent)"};
+// 		if (localStorage.getItem("bodyColor")=="rgb(244, 166, 161)" || localStorage.getItem("bodyColor")=="rgb(221, 190, 168)") {
+// 			if (num == 1){return "radial-gradient(at bottom, #9DA1D5, transparent)"};
+// 			if (num == 2){return "radial-gradient(at top , #9DA1D5, transparent)"};
+// 			if (num == 3){return "radial-gradient(at left , #9DA1D5, transparent)"};
+// 			if (num == 4){return "radial-gradient(at right , #9DA1D5, transparent)"};
+// 			if (num == 5){return "radial-gradient(at top left , #9DA1D5, transparent)"};
+// 			if (num == 6){return "radial-gradient(at top right, #9DA1D5, transparent)"};
+// 			if (num == 7){return "radial-gradient(at bottom left , #9DA1D5, transparent)"};
+// 			if (num == 8){return "radial-gradient(at bottom right , #9DA1D5, transparent)"};
 		
-		}
-		if (num == 1){return "radial-gradient(at bottom, #C7D98C, transparent)"};
-		if (num == 2){return "radial-gradient(at top , #C7D98C, transparent)"};
-		if (num == 3){return "radial-gradient(at left , #C7D98C, transparent)"};
-		if (num == 4){return "radial-gradient(at right , #C7D98C, transparent)"};
-		if (num == 5){return "radial-gradient(at top left , #C7D98C, transparent)"};
-		if (num == 6){return "radial-gradient(at top right, #C7D98C, transparent)"};
-		if (num == 7){return "radial-gradient(at bottom left , #C7D98C, transparent)"};
-		if (num == 8){return "radial-gradient(at bottom right , #C7D98C, transparent)"};
+// 		}
+// 		if (num == 1){return "radial-gradient(at bottom, #C7D98C, transparent)"};
+// 		if (num == 2){return "radial-gradient(at top , #C7D98C, transparent)"};
+// 		if (num == 3){return "radial-gradient(at left , #C7D98C, transparent)"};
+// 		if (num == 4){return "radial-gradient(at right , #C7D98C, transparent)"};
+// 		if (num == 5){return "radial-gradient(at top left , #C7D98C, transparent)"};
+// 		if (num == 6){return "radial-gradient(at top right, #C7D98C, transparent)"};
+// 		if (num == 7){return "radial-gradient(at bottom left , #C7D98C, transparent)"};
+// 		if (num == 8){return "radial-gradient(at bottom right , #C7D98C, transparent)"};
 	
 		
 		
-	  })(1, 9);
+// 	  })(1, 9);
 
 
-	  let gradient11 = (function generateGradient(min, max) {
-		let num = (function getRandomNumber(min, max) {
-			return Math.floor(Math.random() * (max - min) + min)
-		} )(min, max)
+// 	  let gradient11 = (function generateGradient(min, max) {
+// 		let num = (function getRandomNumber(min, max) {
+// 			return Math.floor(Math.random() * (max - min) + min)
+// 		} )(min, max)
 	
-		// let gradientDirection;
+// 		// let gradientDirection;
 		
-		if (localStorage.getItem("bodyColor")=="rgb(244, 166, 161)" || localStorage.getItem("bodyColor")=="rgb(221, 190, 168)") {
-			if (num == 8){return "radial-gradient(at bottom, #9DA1D5, transparent)"};
-			if (num == 7){return "radial-gradient(at top , #9DA1D5, transparent)"};
-			if (num == 6){return "radial-gradient(at left , #9DA1D5, transparent)"};
-			if (num == 5){return "radial-gradient(at right , #9DA1D5, transparent)"};
-			if (num == 4){return "radial-gradient(at top left , #9DA1D5, transparent)"};
-			if (num == 3){return "radial-gradient(at top right, #9DA1D5, transparent)"};
-			if (num == 2){return "radial-gradient(at bottom left , #9DA1D5, transparent)"};
-			if (num == 1){return "radial-gradient(at bottom right , #9DA1D5, transparent)"};
+// 		if (localStorage.getItem("bodyColor")=="rgb(244, 166, 161)" || localStorage.getItem("bodyColor")=="rgb(221, 190, 168)") {
+// 			if (num == 8){return "radial-gradient(at bottom, #9DA1D5, transparent)"};
+// 			if (num == 7){return "radial-gradient(at top , #9DA1D5, transparent)"};
+// 			if (num == 6){return "radial-gradient(at left , #9DA1D5, transparent)"};
+// 			if (num == 5){return "radial-gradient(at right , #9DA1D5, transparent)"};
+// 			if (num == 4){return "radial-gradient(at top left , #9DA1D5, transparent)"};
+// 			if (num == 3){return "radial-gradient(at top right, #9DA1D5, transparent)"};
+// 			if (num == 2){return "radial-gradient(at bottom left , #9DA1D5, transparent)"};
+// 			if (num == 1){return "radial-gradient(at bottom right , #9DA1D5, transparent)"};
 		
-		}
-		if (num == 8){return "radial-gradient(at bottom, #C7D98C, transparent)"};
-		if (num == 7){return "radial-gradient(at top , #C7D98C, transparent)"};
-		if (num == 6){return "radial-gradient(at left , #C7D98C, transparent)"};
-		if (num == 5){return "radial-gradient(at right , #C7D98C, transparent)"};
-		if (num == 4){return "radial-gradient(at top left , #C7D98C, transparent)"};
-		if (num == 3){return "radial-gradient(at top right, #C7D98C, transparent)"};
-		if (num == 2){return "radial-gradient(at bottom left , #C7D98C, transparent)"};
-		if (num == 1){return "radial-gradient(at bottom right , #C7D98C, transparent)"};
+// 		}
+// 		if (num == 8){return "radial-gradient(at bottom, #C7D98C, transparent)"};
+// 		if (num == 7){return "radial-gradient(at top , #C7D98C, transparent)"};
+// 		if (num == 6){return "radial-gradient(at left , #C7D98C, transparent)"};
+// 		if (num == 5){return "radial-gradient(at right , #C7D98C, transparent)"};
+// 		if (num == 4){return "radial-gradient(at top left , #C7D98C, transparent)"};
+// 		if (num == 3){return "radial-gradient(at top right, #C7D98C, transparent)"};
+// 		if (num == 2){return "radial-gradient(at bottom left , #C7D98C, transparent)"};
+// 		if (num == 1){return "radial-gradient(at bottom right , #C7D98C, transparent)"};
 	
 		
 		
-	  })(1, 9);
+// 	  })(1, 9);
 	
 	  
-	let gradient2 = (function generateGradient(min, max) {
-		let num = (function getRandomNumber(min, max) {
-			return Math.floor(Math.random() * (max - min) + min)
-		} )(min, max)
+// 	let gradient2 = (function generateGradient(min, max) {
+// 		let num = (function getRandomNumber(min, max) {
+// 			return Math.floor(Math.random() * (max - min) + min)
+// 		} )(min, max)
 
 		
-		if (num == 8){return "radial-gradient(at bottom, #B92977, transparent)"};
-		if (num == 4){return "radial-gradient(at top , #B92977, transparent)"};
-		if (num == 7){return "radial-gradient(at left , #B92977, transparent)"};
-		if (num == 3){return "radial-gradient(at right , #B92977, transparent)"};
-		if (num == 6){return "radial-gradient(at top left , #B92977, transparent)"};
-		if (num == 2){return "radial-gradient(at top right, #B92977, transparent)"};
-		if (num == 5){return "radial-gradient(at bottom left , #B92977, transparent)"};
-		if (num == 1){return "radial-gradient(at bottom right , #B92977, transparent)"};
+// 		if (num == 8){return "radial-gradient(at bottom, #B92977, transparent)"};
+// 		if (num == 4){return "radial-gradient(at top , #B92977, transparent)"};
+// 		if (num == 7){return "radial-gradient(at left , #B92977, transparent)"};
+// 		if (num == 3){return "radial-gradient(at right , #B92977, transparent)"};
+// 		if (num == 6){return "radial-gradient(at top left , #B92977, transparent)"};
+// 		if (num == 2){return "radial-gradient(at top right, #B92977, transparent)"};
+// 		if (num == 5){return "radial-gradient(at bottom left , #B92977, transparent)"};
+// 		if (num == 1){return "radial-gradient(at bottom right , #B92977, transparent)"};
 	
 		
 		
-	  })(1, 9);
+// 	  })(1, 9);
 
-	  let gradient22 = (function generateGradient(min, max) {
-		let num = (function getRandomNumber(min, max) {
-			return Math.floor(Math.random() * (max - min) + min)
-		} )(min, max)
+// 	  let gradient22 = (function generateGradient(min, max) {
+// 		let num = (function getRandomNumber(min, max) {
+// 			return Math.floor(Math.random() * (max - min) + min)
+// 		} )(min, max)
 
 		
-		if (num == 3){return "radial-gradient(at bottom, #B92977, transparent)"};
-		if (num == 6){return "radial-gradient(at top , #B92977, transparent)"};
-		if (num == 8){return "radial-gradient(at left , #B92977, transparent)"};
-		if (num == 1){return "radial-gradient(at right , #B92977, transparent)"};
-		if (num == 4){return "radial-gradient(at top left , #B92977, transparent)"};
-		if (num == 7){return "radial-gradient(at top right, #B92977, transparent)"};
-		if (num == 5){return "radial-gradient(at bottom left , #B92977, transparent)"};
-		if (num == 2){return "radial-gradient(at bottom right , #B92977, transparent)"};
+// 		if (num == 3){return "radial-gradient(at bottom, #B92977, transparent)"};
+// 		if (num == 6){return "radial-gradient(at top , #B92977, transparent)"};
+// 		if (num == 8){return "radial-gradient(at left , #B92977, transparent)"};
+// 		if (num == 1){return "radial-gradient(at right , #B92977, transparent)"};
+// 		if (num == 4){return "radial-gradient(at top left , #B92977, transparent)"};
+// 		if (num == 7){return "radial-gradient(at top right, #B92977, transparent)"};
+// 		if (num == 5){return "radial-gradient(at bottom left , #B92977, transparent)"};
+// 		if (num == 2){return "radial-gradient(at bottom right , #B92977, transparent)"};
 	
 		
 		
-	  })(1, 9);
+// 	  })(1, 9);
 	
-	  document.getElementsByClassName("background-block")[0].style.background = gradient;
-	  document.getElementsByClassName("second-background-block")[0].style.background = gradient2; 
-	  document.getElementsByClassName("background-block2")[0].style.background = gradient11;
-	  document.getElementsByClassName("second-background-block2")[0].style.background = gradient22;
+// 	  document.getElementsByClassName("background-block")[0].style.background = gradient;
+// 	  document.getElementsByClassName("second-background-block")[0].style.background = gradient2; 
+// 	  document.getElementsByClassName("background-block2")[0].style.background = gradient11;
+// 	  document.getElementsByClassName("second-background-block2")[0].style.background = gradient22;
 	
 	  
-	//   if (document.getElementsByClassName("background-block")[0].style.opacity == "0") {
-	// 	document.getElementsByClassName("background-block")[0].style.opacity = "1";
-	// 	document.getElementsByClassName("background-block2")[0].style.opacity = "0";
-	// } else {
-	// 	document.getElementsByClassName("background-block")[0].style.opacity = "0";
-	// 	document.getElementsByClassName("background-block2")[0].style.opacity = "1";
-	// }
+// 	//   if (document.getElementsByClassName("background-block")[0].style.opacity == "0") {
+// 	// 	document.getElementsByClassName("background-block")[0].style.opacity = "1";
+// 	// 	document.getElementsByClassName("background-block2")[0].style.opacity = "0";
+// 	// } else {
+// 	// 	document.getElementsByClassName("background-block")[0].style.opacity = "0";
+// 	// 	document.getElementsByClassName("background-block2")[0].style.opacity = "1";
+// 	// }
 	
-	// if (document.getElementsByClassName("second-background-block")[0].style.opacity == "0") {
-	// 	document.getElementsByClassName("second-background-block")[0].style.opacity = "1";
-	// 	document.getElementsByClassName("second-background-block2")[0].style.opacity = "0";
-	// } else {
-	// 	document.getElementsByClassName("second-background-block")[0].style.opacity = "0";
-	// 	document.getElementsByClassName("second-background-block2")[0].style.opacity = "1";
-	// }
+// 	// if (document.getElementsByClassName("second-background-block")[0].style.opacity == "0") {
+// 	// 	document.getElementsByClassName("second-background-block")[0].style.opacity = "1";
+// 	// 	document.getElementsByClassName("second-background-block2")[0].style.opacity = "0";
+// 	// } else {
+// 	// 	document.getElementsByClassName("second-background-block")[0].style.opacity = "0";
+// 	// 	document.getElementsByClassName("second-background-block2")[0].style.opacity = "1";
+// 	// }
 	
-	}, 4000);
+// 	}, 4000);
 
 
 	// document.getElementById("goals").onclick = sectionGoalsOpen;
