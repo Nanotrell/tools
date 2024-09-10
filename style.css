@@ -285,21 +285,21 @@ input {
 }
 
 @keyframes gradient-light {
-	from {background: radial-gradient(at top right, #9DA1D5, transparent); opacity: 1;}
+	from {background: radial-gradient(at top right, #9da1d57e, transparent); opacity: 1;}
 	7% {opacity: 0;}
-	12.5% {background: radial-gradient(at top left, #9DA1D5, transparent); opacity: 1;}
+	12.5% {background: radial-gradient(at top left, #9da1d57e, transparent); opacity: 1;}
 	18.75% {opacity: 0;}
-	25% {background: radial-gradient(at bottom right, #9DA1D5, transparent); opacity: 1;}
+	25% {background: radial-gradient(at bottom right, #9da1d57e, transparent); opacity: 1;}
 	31.25% {opacity: 0;}
-	37.5% {background: radial-gradient(at bottom left, #9DA1D5, transparent); opacity: 1;}
+	37.5% {background: radial-gradient(at bottom left, #9da1d57e, transparent); opacity: 1;}
 	43.75% {opacity: 0;}
-	50% {background: radial-gradient(at left, #9DA1D5, transparent); opacity: 1;}
+	50% {background: radial-gradient(at left, #9da1d57e, transparent); opacity: 1;}
 	56.25% {opacity: 0;}
-	62.5% {background: radial-gradient(at right, #9DA1D5, transparent); opacity: 1;}
+	62.5% {background: radial-gradient(at right, #9da1d57e, transparent); opacity: 1;}
 	68.75% {opacity: 0;}
-	75% {background: radial-gradient(at bottom, #9DA1D5, transparent); opacity: 1;}
+	75% {background: radial-gradient(at bottom, #9da1d57e, transparent); opacity: 1;}
 	81.25% {opacity: 0;}
-	90% {background: radial-gradient(at top, #9DA1D5, transparent); opacity: 1;}
+	90% {background: radial-gradient(at top, #9da1d57e, transparent); opacity: 1;}
 	to {opacity: 0;}
 
 }
@@ -326,40 +326,40 @@ input {
 }
 
 @keyframes gradient-purple {
-	from {background: radial-gradient(at bottom, #B92977, transparent); opacity: 1;}
+	from {background: radial-gradient(at bottom, #b929768f, transparent); opacity: 1;}
 	7% {opacity: 0;}
-	12.5% {background: radial-gradient(at top, #B92977, transparent); opacity: 1;}
+	12.5% {background: radial-gradient(at top, #b929768f, transparent); opacity: 1;}
 	18.75% {opacity: 0;}
-	25% {background: radial-gradient(at left, #B92977, transparent); opacity: 1;}
+	25% {background: radial-gradient(at left, #b929768f, transparent); opacity: 1;}
 	31.25% {opacity: 0;}
-	37.5% {background: radial-gradient(at right, #B92977, transparent); opacity: 1;}
+	37.5% {background: radial-gradient(at right, #b929768f, transparent); opacity: 1;}
 	43.75% {opacity: 0;}
-	50% {background: radial-gradient(at top left, #B92977, transparent); opacity: 1;}
+	50% {background: radial-gradient(at top left, #b929768f, transparent); opacity: 1;}
 	56.25% {opacity: 0;}
-	62.5% {background: radial-gradient(at top right, #B92977, transparent); opacity: 1;}
+	62.5% {background: radial-gradient(at top right, #b929768f, transparent); opacity: 1;}
 	68.75% {opacity: 0;}
-	75% {background: radial-gradient(at bottom left, #B92977, transparent); opacity: 1;}
+	75% {background: radial-gradient(at bottom left, #b929768f, transparent); opacity: 1;}
 	81.25% {opacity: 0;}
-	90% {background: radial-gradient(at bottom right, #B92977, transparent); opacity: 1;}
+	90% {background: radial-gradient(at bottom right, #b929768f, transparent); opacity: 1;}
 	to {opacity: 0;}
 }
 
 @keyframes gradient-purple-backwards {
 	from {opacity: 0;}
-	7% {background: radial-gradient(at bottom right, #8cd9ac9c, transparent); opacity: 1;}
+	7% {background: radial-gradient(at bottom right, #8cd9ac54, transparent); opacity: 1;}
 	12.5% {opacity: 0;}
-	18.75% {background: radial-gradient(at bottom left, #8cd9ac9c, transparent); opacity: 1;}
+	18.75% {background: radial-gradient(at bottom left, #8cd9ac54, transparent); opacity: 1;}
 	25% {opacity: 0;}
-	31.25% {background: radial-gradient(at top right, #8cd9ac9c, transparent); opacity: 1;}
+	31.25% {background: radial-gradient(at top right, #8cd9ac54, transparent); opacity: 1;}
 	37.5% {opacity: 0;}
-	43.75% {background: radial-gradient(at top left, #8cd9ac9c, transparent); opacity: 1;}
+	43.75% {background: radial-gradient(at top left, #8cd9ac54, transparent); opacity: 1;}
 	50% {opacity: 0;}
-	56.25% {background: radial-gradient(at right, #8cd9ac9c, transparent); opacity: 1;}
+	56.25% {background: radial-gradient(at right, #8cd9ac54, transparent); opacity: 1;}
 	62.5% {opacity: 0;}
-	68.75% {background: radial-gradient(at left, #8cd9ac9c, transparent); opacity: 1;}
+	68.75% {background: radial-gradient(at left, #8cd9ac54, transparent); opacity: 1;}
 	75% {opacity: 0;}
-	81.25% {background: radial-gradient(at top, #8cd9ac9c, transparent); opacity: 1;}
+	81.25% {background: radial-gradient(at top, #8cd9ac54, transparent); opacity: 1;}
 	90% {opacity: 0;}
-	to {background: radial-gradient(at bottom, #8cd9ac9c, transparent); opacity: 1;}
+	to {background: radial-gradient(at bottom, #8cd9ac54, transparent); opacity: 1;}
 
 }
