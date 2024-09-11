@@ -227,6 +227,15 @@ input {
 	
 }
 
+
+@media (width < 300px) {
+	.goals div, .notes div, .tasks div, .create {
+		font-size: 15px;
+		width: 150px;
+		height: 150px;
+	}
+}
+
 .goals div::-webkit-scrollbar, .notes div::-webkit-scrollbar, .tasks div::-webkit-scrollbar  {
 	width: 12px;               /* ширина scrollbar */
   }
