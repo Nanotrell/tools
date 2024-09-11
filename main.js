@@ -249,10 +249,14 @@ for (let index = 0; index < document.getElementsByClassName("color").length; ind
 		
 		if (document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(52, 68, 13)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(56, 4, 14)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(39, 35, 58)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(61, 52, 139)") {
 			localStorage.setItem("textColor", "#EBE7E7");
-			elem.style.color = localStorage.getItem("textColor");
 			document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
 			localStorage.setItem("border", "2px solid #9F9A9A");
 			localStorage.setItem("boxShadow", "5px 4px 67px 0px #FAF4F4");
+			
+			for (let index = 0; index < List.getElementsByTagName("div").length; index++) {
+				let e = document.getElementsByTagName("div")[index];
+				e.style.color = localStorage.getItem("textColor");
+			}
 			for (let index = 0; index < document.getElementsByClassName("text").length; index++) {
 				document.getElementsByClassName("text")[index].style.color = localStorage.getItem("textColor");
 			}
@@ -273,10 +277,13 @@ for (let index = 0; index < document.getElementsByClassName("color").length; ind
 		if (document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(52, 68, 13)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(56, 4, 14)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(39, 35, 58)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(61, 52, 139)"){
 			localStorage.setItem("textColor", "rgb(0, 0, 0, 0.5)");
 			document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
-			elem.style.color = localStorage.getItem("textColor");
 			localStorage.setItem("border", "none");
 			localStorage.setItem("boxShadow", "5px 4px 67px 0px rgba(0, 0, 0, 0.4)");
-
+			
+			for (let index = 0; index < List.getElementsByTagName("div").length; index++) {
+				let e = document.getElementsByTagName("div")[index];
+				e.style.color = localStorage.getItem("textColor");
+			}
 			for (let index = 0; index < document.getElementsByClassName("text").length; index++) {
 				document.getElementsByClassName("text")[index].style.color = localStorage.getItem("textColor");
 				
@@ -296,6 +303,7 @@ for (let index = 0; index < document.getElementsByClassName("color").length; ind
 
 			document.getElementsByClassName("themes-choose")[0].style.boxShadow = localStorage.getItem("boxShadow");
 		}
+		
 };
 
 
