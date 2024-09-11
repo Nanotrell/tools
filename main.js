@@ -1,10 +1,8 @@
 
 
-localStorage.setItem("textColor", "#EBE7E7");
 document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
 localStorage.setItem("border", "2px solid #9F9A9A");
 localStorage.setItem("boxShadow", "5px 4px 67px 0px #FAF4F4");
-document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(61, 52, 139)";
 
 
 
@@ -251,6 +249,7 @@ for (let index = 0; index < document.getElementsByClassName("color").length; ind
 		
 		if (document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(52, 68, 13)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(56, 4, 14)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(39, 35, 58)" || document.getElementsByTagName("body")[0].style.backgroundColor == "rgb(61, 52, 139)") {
 			localStorage.setItem("textColor", "#EBE7E7");
+			elem.style.color = localStorage.getItem("textColor");
 			document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
 			localStorage.setItem("border", "2px solid #9F9A9A");
 			localStorage.setItem("boxShadow", "5px 4px 67px 0px #FAF4F4");
@@ -274,6 +273,7 @@ for (let index = 0; index < document.getElementsByClassName("color").length; ind
 		if (document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(52, 68, 13)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(56, 4, 14)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(39, 35, 58)" && document.getElementsByTagName("body")[0].style.backgroundColor != "rgb(61, 52, 139)"){
 			localStorage.setItem("textColor", "rgb(0, 0, 0, 0.5)");
 			document.getElementsByTagName("input")[0].style.color = localStorage.getItem("textColor");
+			elem.style.color = localStorage.getItem("textColor");
 			localStorage.setItem("border", "none");
 			localStorage.setItem("boxShadow", "5px 4px 67px 0px rgba(0, 0, 0, 0.4)");
 
@@ -362,26 +362,32 @@ document.getElementById("note-create").onclick = CreateNote;
 
       var Storage_size = localStorage.length;
 
-      if (Storage_size > 0) {
-		console.log(111111)
+      if (Storage_size >4) {
 
         for (var i = 0; i < Storage_size; i++) {
           var key = localStorage.key(i);
-		  console.log(key)
 		  
           if (key.indexOf(Mask) == 0) {
-			console.log(22222222)
-			var number_Id = i;
+			
             var elem = document.createElement('div');
-			elem.setAttribute("data-elemid", Mask + number_Id)
+			elem.setAttribute("data-elemid", key)
 			// elem.addClass('tdItem');
 			// elem.attr('data-itemid', Mask + number_Id);
 			elem.textContent = localStorage.getItem(key);
-			List.appendChild(elem);
-			console.log(3333333)
+			// List.appendChild(elem);
+			var close = document.createElement('nav');
+			close.classList = "close text";
+			close.style.color = localStorage.getItem("textColor");
+			close.textContent = "Х";
+			elem.appendChild(close);
+			elem.style.color = localStorage.getItem("textColor");
+
+			List.insertBefore(elem, List.getElementsByTagName("div")[0]);
           }
         }
       }
+
+
     }
 
     showTasks();
@@ -389,27 +395,61 @@ document.getElementById("note-create").onclick = CreateNote;
 
 
 	function CreateNote() {
+		var number_Id = 0;
 		var str = document.getElementsByTagName("input")[0].value;
+		document.getElementsByTagName("input")[0].value = "";
 		if (str.length > 0) {
-			number_Id = (List.getElementsByTagName("div")).length + 1;
+			for (var i = 0; i < localStorage.length; i++) {
+          	var key = localStorage.key(i);
+          	if (key.indexOf(Mask) == 0) {
+				number_Id = number_Id + 1;
+			}};
+			
 			localStorage.setItem(Mask + number_Id, str);
 			var elem = document.createElement('div');
 			elem.setAttribute("data-elemid", Mask + number_Id)
 			// elem.addClass('tdItem');
 			// elem.attr('data-itemid', Mask + number_Id);
 			elem.textContent = str;
-			List.appendChild(elem);
+			var close = document.createElement('nav');
+			close.classList = "close text";
+			close.style.color = localStorage.getItem("textColor");
+			close.textContent = "Х";
+			elem.appendChild(close);
+			elem.style.color = localStorage.getItem("textColor");
+			List.insertBefore(elem, List.getElementsByTagName("div")[0]);
+
+
+			location.reload()
 		}
-	}
+
+		}
 
 
-
-	// for (let index = 1; index < List.getElementsByTagName("div").length; index++) {
-	// 	List.getElementsByTagName("div")[index].onclick = RemoveNote;
-	// 	function RemoveNote() {
-	// 		localStorage.removeItem(List.getElementsByTagName("div")[index].getAttribute("data-elemid"));
-						
-	// 		List.remove(List.getElementsByTagName("div")[index]);
-	// 	}
 		
+
+
+	// for (let index = 0; index < document.getElementsByClassName("close").length; index++) {
+	// 	var c = document.getElementsByClassName("close")[index];
+	// 	c.onclick = RemoveParent;
+	
+	// }
+
+	for (i = 0; i < document.getElementsByClassName("close").length; i++) {
+		document.getElementsByClassName("close")[i].addEventListener("click", function() {
+		var c = this;
+		localStorage.removeItem(c.parentElement.getAttribute("data-elemid"));
+		c.parentNode.remove(c.parentElement);
+	  });}
+
+				
+	// function RemoveParent() {
+
+	// 	localStorage.removeItem(c.parentElement.getAttribute("data-elemid"));
+	// 	alert(localStorage.getItem(c.parentElement.getAttribute("data-elemid")) + c.parentElement.getAttribute("data-elemid") + " was removed");
+	// 	c.parentNode.remove(c.parentElement);
+
+	// 	alert(c.parentNode.getAttribute("data-elemid"))
+
+	// 	// location.reload()
 	// }
