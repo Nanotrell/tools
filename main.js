@@ -430,7 +430,7 @@ document.getElementById("note-create").onclick = CreateNote;
 		if (heading.length > 0) {
 			heading = '„' + heading + '“';
 		}
-		if (str.length > 0 ) {
+		if (str.length > 0 || heading.length > 0) {
 			var number_Id = 0;
 			for (var i = 0; i < localStorage.length; i++) {
 				var key = localStorage.key(i);
