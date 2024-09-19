@@ -367,10 +367,10 @@ document.getElementById("note-create").onclick = CreateNote;
 
     function showTasks() {
 		console.log(localStorage)
-
+		  
       var Storage_size = localStorage.length;
 
-      if (Storage_size >4) {
+      if (Storage_size > 0) {
 
         for (var i = 0; i < Storage_size; i++) {
           var key = localStorage.key(i);
@@ -381,7 +381,26 @@ document.getElementById("note-create").onclick = CreateNote;
 			elem.setAttribute("data-elemid", key)
 			// elem.addClass('tdItem');
 			// elem.attr('data-itemid', Mask + number_Id);
-			elem.textContent = localStorage.getItem(key);
+			
+			var strokeContent = localStorage.getItem(key);
+			for (let index = 0; index < strokeContent.length; index++) {
+				if (strokeContent[0] == "„") {
+					var H2 = strokeContent.substring(0, strokeContent.indexOf("“")+1);
+					var Hparagraf = strokeContent.substring(strokeContent.indexOf("“")+1);
+				} else {
+					var H2 = "";
+					var Hparagraf = strokeContent;
+				}
+				
+				
+			}
+			var elemp = document.createElement('p');
+			var elemhead = document.createElement('h2');
+			elemhead.textContent = H2;
+			elemp.style.maxWidth = "100%";
+			elemp.textContent = Hparagraf; 
+			if (H2 != "") {elem.appendChild(elemhead);};
+			elem.appendChild(elemp);
 			// List.appendChild(elem);
 			var close = document.createElement('nav');
 			close.classList = "close text";
@@ -403,22 +422,34 @@ document.getElementById("note-create").onclick = CreateNote;
 
 
 	function CreateNote() {
-		var number_Id = 0;
-		var str = document.getElementsByTagName("input")[0].value;
+		var heading = document.getElementsByTagName("input")[0].value;
+		
 		document.getElementsByTagName("input")[0].value = "";
-		if (str.length > 0) {
+		var str = document.getElementsByTagName("input")[1].value;
+		document.getElementsByTagName("input")[1].value = "";
+		if (heading.length > 0) {
+			heading = '„' + heading + '“';
+		}
+		if (str.length > 0 ) {
+			var number_Id = 0;
 			for (var i = 0; i < localStorage.length; i++) {
-          	var key = localStorage.key(i);
-          	if (key.indexOf(Mask) == 0) {
-				number_Id = number_Id + 1;
-			}};
-			
-			localStorage.setItem(Mask + number_Id, str);
+				var key = localStorage.key(i);
+				if (key.indexOf(Mask) == 0) {
+				  number_Id = number_Id + 1;
+			  }};
+			  
+			localStorage.setItem(Mask + number_Id, heading + str);
 			var elem = document.createElement('div');
+			var elemhead = document.createElement('h2');
 			elem.setAttribute("data-elemid", Mask + number_Id)
 			// elem.addClass('tdItem');
 			// elem.attr('data-itemid', Mask + number_Id);
-			elem.textContent = str;
+			var elemp = document.createElement('p');
+			elemhead.textContent = heading;
+			elemp.style.maxWidth = "100%";
+			elemp.textContent = str;
+			elem.appendChild(elemhead);
+			elem.appendChild(elemp);
 			var close = document.createElement('nav');
 			close.classList = "close text";
 			close.style.color = localStorage.getItem("textColor");
